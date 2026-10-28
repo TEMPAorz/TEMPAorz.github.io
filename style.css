@@ -1,0 +1,121 @@
+/* 公開サイト（GitHub Pages）の共通スタイル。色は拡張機能の src/ui/theme.css に合わせる */
+:root {
+  color-scheme: light dark;
+  --bg: #f4f5f7;
+  --surface: #fff;
+  --text: #1d2129;
+  --muted: #656d7a;
+  --border: #e3e6eb;
+  --accent: #2f5bd3;
+  --accent-text: #fff;
+  --accent-soft: #eaf0fd;
+  --warn: #9a4b00;
+  --warn-soft: #fff3e0;
+  --radius: 12px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17191d;
+    --surface: #22252b;
+    --text: #e8eaee;
+    --muted: #9aa1ad;
+    --border: #353a42;
+    --accent: #7a9cff;
+    --accent-text: #10131a;
+    --accent-soft: #263150;
+    --warn: #ffb35c;
+    --warn-soft: #3a2c1a;
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font: 15px/1.8 system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+img { max-width: 100%; height: auto; }
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+
+/* ヘッダー */
+.topbar { border-bottom: 1px solid var(--border); background: var(--surface); }
+.topbar .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 16px; padding-top: 10px; padding-bottom: 10px; }
+.brand { display: flex; align-items: center; gap: 8px; color: var(--text); font-weight: 700; text-decoration: none; }
+.brand img { width: 28px; height: 28px; }
+.brand small { color: var(--muted); font-size: 12px; font-weight: 400; }
+.topbar nav { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 14px; }
+.topbar nav a { color: var(--muted); text-decoration: none; }
+.topbar nav a:hover { color: var(--text); }
+
+/* トップの見出し */
+.hero { padding: 48px 0 40px; }
+.hero .wrap { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 32px; }
+.hero h1 { margin: 0 0 12px; font-size: 32px; line-height: 1.4; letter-spacing: .01em; }
+.hero .lead { margin: 0 0 20px; color: var(--muted); font-size: 16px; }
+.hero figure { margin: 0; }
+.hero figure img { display: block; width: 300px; border: 1px solid var(--border); border-radius: var(--radius);
+                   box-shadow: 0 8px 28px rgba(0, 0, 0, .12); }
+.hero figcaption { margin-top: 8px; color: var(--muted); font-size: 12px; text-align: center; }
+.cta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
+.button { display: inline-block; padding: 10px 18px; border-radius: 8px; background: var(--accent); color: var(--accent-text);
+          font-weight: 600; text-decoration: none; }
+.button.soon { background: var(--border); color: var(--muted); }
+.cta small { color: var(--muted); font-size: 13px; }
+
+/* セクション */
+section { padding: 32px 0; }
+section h2 { margin: 0 0 16px; font-size: 22px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.card { padding: 18px 20px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.card h3 { margin: 0 0 6px; font-size: 16px; }
+.card p { margin: 0; color: var(--muted); font-size: 14px; }
+.steps { margin: 0; padding-left: 1.4em; }
+.steps li + li { margin-top: 6px; }
+.callout { padding: 16px 20px; border: 1px solid var(--accent); border-radius: var(--radius); background: var(--accent-soft); }
+.callout strong { display: block; margin-bottom: 4px; }
+.callout p { margin: 0; }
+.small { color: var(--muted); font-size: 13px; }
+ul.small { padding-left: 1.4em; }
+
+/* 表 */
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; border: 1px solid var(--border); background: var(--surface); font-size: 14px; }
+th, td { padding: 10px 14px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+thead th { background: var(--bg); font-size: 13px; }
+td.mark { text-align: center; }
+.price { font-size: 20px; font-weight: 700; }
+.paid-badge { display: inline-block; margin-left: 6px; padding: 0 8px; border-radius: 999px; background: var(--warn-soft);
+              color: var(--warn); font-size: 11px; font-style: normal; font-weight: 600; vertical-align: 2px; }
+
+/* よくある質問 */
+details { border: 1px solid var(--border); border-radius: 8px; background: var(--surface); }
+details + details { margin-top: 8px; }
+summary { padding: 12px 16px; cursor: pointer; font-weight: 600; }
+details p { margin: 0; padding: 0 16px 14px; color: var(--muted); font-size: 14px; }
+
+/* 文書のページ（プライバシーポリシー・特商法表記） */
+.doc { max-width: 760px; padding-top: 32px; padding-bottom: 48px; }
+.doc h1 { margin: 0 0 8px; font-size: 26px; }
+.doc h2 { margin: 32px 0 8px; font-size: 18px; }
+.doc .meta { color: var(--muted); font-size: 13px; }
+.doc table th { width: 30%; background: var(--bg); }
+.doc ul, .doc ol { padding-left: 1.4em; }
+
+/* フッター */
+footer { margin-top: 24px; padding: 24px 0 32px; border-top: 1px solid var(--border); color: var(--muted); font-size: 13px; }
+footer nav { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-bottom: 8px; }
+footer nav a { color: var(--muted); }
+footer p { margin: 4px 0; }
+
+@media (max-width: 720px) {
+  .hero { padding: 32px 0 24px; }
+  .hero .wrap { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 26px; }
+  .hero figure img { width: 100%; max-width: 320px; margin: 0 auto; }
+  .grid { grid-template-columns: 1fr; }
+  .doc table th { width: 36%; }
+}
