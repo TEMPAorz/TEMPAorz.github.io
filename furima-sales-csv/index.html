@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>フリマ売上CSV（メルカリ対応）</title>
+  <meta name="description" content="メルカリの販売履歴を、確定申告のための集計と、freee・マネーフォワード クラウド確定申告に取り込めるCSVにまとめるChrome拡張機能です。">
+  <link rel="icon" href="icon-32.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="icon-128.png" alt="">フリマ売上CSV<small>メルカリ対応</small></a>
+      <nav>
+        <a href="#features">できること</a>
+        <a href="#pricing">料金</a>
+        <a href="#faq">よくある質問</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="wrap">
+        <div>
+          <h1>メルカリの売上を、<br>確定申告用のCSVに。</h1>
+          <p class="lead">メルカリの販売履歴を読み取り、年ごとの売上・手数料・送料を集計するChrome拡張機能です。
+            freee や マネーフォワード クラウド確定申告に、そのまま取り込めるCSVを作れます。</p>
+          <div class="cta">
+            <span class="button soon" aria-disabled="true">Chromeウェブストアで公開準備中</span>
+            <small>パソコン版の Google Chrome で使えます</small>
+          </div>
+        </div>
+        <figure>
+          <img src="screenshot-popup.png" width="300" alt="拡張機能のポップアップ。2026年の販売利益、売上・手数料・送料の内訳、CSVの形式の選択が表示されている">
+          <figcaption>画面の例（金額はサンプルです）</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <section id="features">
+      <div class="wrap">
+        <h2>できること</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>販売履歴を表示するだけ</h3>
+            <p>メルカリの「販売履歴」ページを開くと、表示された販売データを自動で保存します。手で書き写す必要はありません。</p>
+          </div>
+          <div class="card">
+            <h3>会計ソフトに取り込めるCSV</h3>
+            <p>Excel で使える汎用CSVのほか、freee 会計の取引インポート、マネーフォワード クラウド確定申告の仕訳帳インポートの形式で書き出せます。</p>
+          </div>
+          <div class="card">
+            <h3>不用品は申告から外せる</h3>
+            <p>自分の服や家具など、生活に使っていた物の売上は、商品ごとに「申告に含めない」を選んで集計とCSVから外せます。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <h2>使い方</h2>
+        <ol class="steps">
+          <li>Chromeに拡張機能を追加します。</li>
+          <li>メルカリの「出品した商品」→「販売履歴」を開き、申告する年を選んで最後のページまで表示します。</li>
+          <li>拡張機能のポップアップで形式を選び、「CSVをダウンロード」を押します。</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="data">
+      <div class="wrap">
+        <div class="callout">
+          <strong>販売データは、お使いのパソコンの外に出しません</strong>
+          <p>販売データ（商品名・金額・販売日など）は、お使いのChromeの中だけに保存し、外部のサーバーには送信しません。
+            開発者を含め、ほかの人があなたの販売データを見ることはできません。
+            詳しくは<a href="../privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div class="wrap">
+        <h2>料金</h2>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr><th scope="col"></th><th scope="col">無料</th><th scope="col">有料プラン</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">料金</th><td><span class="price">0円</span></td><td><span class="price">年額 2,480円</span><br><span class="small">1年ごとの自動更新</span></td></tr>
+              <tr><th scope="row">販売履歴の読み込み・集計</th><td class="mark">○</td><td class="mark">○</td></tr>
+              <tr><th scope="row">申告に含めない商品の選択</th><td class="mark">○</td><td class="mark">○</td></tr>
+              <tr><th scope="row">汎用CSV（Excel）</th><td class="mark">○</td><td class="mark">○</td></tr>
+              <tr><th scope="row">freee・マネーフォワード形式のCSV<em class="paid-badge">有料</em></th><td class="mark">—</td><td class="mark">○</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="small">
+          <li>有料プランは、拡張機能の中から申し込めます。お支払いはクレジットカードです（決済サービスの Stripe を利用します）。</li>
+          <li>拡張機能の「プランの管理」から、いつでも解約できます。解約しても、支払い済みの期間の終わりまで使えます。</li>
+          <li>料金・解約・返金については<a href="../tokushoho.html">特定商取引法にもとづく表記</a>もご覧ください。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <h2>よくある質問</h2>
+        <details>
+          <summary>どの環境で使えますか</summary>
+          <p>パソコン版の Google Chrome で使えます。スマートフォンのメルカリアプリには対応していません。</p>
+        </details>
+        <details>
+          <summary>メルカリのアカウント情報を入力する必要はありますか</summary>
+          <p>ありません。Chromeでメルカリにログインした状態で、販売履歴のページに表示された内容を読み取ります。</p>
+        </details>
+        <details>
+          <summary>どの売上を申告すればよいか教えてくれますか</summary>
+          <p>このツールは、売上が課税の対象になるかどうかを判断しません。迷うときは税務署や税理士にご相談ください。</p>
+        </details>
+        <details>
+          <summary>別のパソコンでも有料プランを使えますか</summary>
+          <p>使えます。拡張機能の申し込みの案内にある「申し込み済みの方はこちら」から、支払いに使ったメールアドレスで有効にできます。
+            販売データはパソコンごとに保存されるため、別のパソコンでは販売履歴を読み込み直してください。</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <h2>お問い合わせ</h2>
+        <p>ご質問・不具合のご報告は、メールでお送りください。<br>
+          <a href="mailto:kazunariootobiz@gmail.com">kazunariootobiz@gmail.com</a></p>
+        <p class="small">返信までに数日いただくことがあります。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <nav>
+        <a href="../privacy.html">プライバシーポリシー</a>
+        <a href="../tokushoho.html">特定商取引法にもとづく表記</a>
+        <a href="#contact">お問い合わせ</a>
+        <a href="../index.html">TEMPA Systems</a>
+      </nav>
+      <p>メルカリは株式会社メルカリの商標です。freee はフリー株式会社の、マネーフォワードは株式会社マネーフォワードの商標です。
+        このツールは個人が作成したもので、これらの会社とは関係ありません。</p>
+      <p>© 2026 TEMPA Systems</p>
+    </div>
+  </footer>
+</body>
+</html>
